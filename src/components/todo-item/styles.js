@@ -10,6 +10,7 @@ export const Task = styled.div`
   margin-left: 20px;
   cursor: pointer;
   transition: all 0.5s ease;
+  margin: 15px;
 
   &:hover {
     -webkit-box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.75);
@@ -28,7 +29,7 @@ export const Body = styled.div`
 `
 
 export const Indicator = styled.div`
-  background-color: ${colors.accent.red};
+  background-color: ${({ done }) => done ? colors.accent.green : colors.accent.red};
   width: 2.5%;
   margin-right: 2px;
   border-top-left-radius: 6px;
