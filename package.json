@@ -39,6 +39,7 @@
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.2.0",
     "cypress": "^3.3.0",
+    "jest-styled-components": "^6.3.1",
     "react-testing-library": "^7.0.1"
   }
 }
