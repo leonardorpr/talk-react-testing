@@ -6,8 +6,8 @@ import { TodoItem } from 'components'
 import { Container, Title } from './styles'
 
 const renderTasks = (tasks) => {
-  const mappedTasks = tasks.map(task => (
-    <TodoItem done={task.done} label={task.label} time={task.time} toggle={() => { }} />
+  const mappedTasks = tasks.map((task, index) => (
+    <TodoItem key={index} done={task.done} label={task.label} time={task.time} toggle={() => { }} />
   ))
 
   return mappedTasks

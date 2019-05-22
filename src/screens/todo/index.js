@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TodoList } from 'components'
+import { TodoList, Form } from 'components'
 
 import { Container } from './styles'
 
@@ -13,6 +13,7 @@ const tasks = [
 
 const Todo = () => (
   <Container>
+    <Form />
     <TodoList title='To Do' tasks={tasks} />
   </Container>
 )
