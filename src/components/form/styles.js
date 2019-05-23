@@ -12,7 +12,9 @@ export const Container = styled.div`
   justify-content: space-between;
 `
 
-export const Field = styled.input`
+export const Field = styled.input.attrs({
+  type: 'text'
+})`
   background-color: ${colors.secondary.light};
   height: 20px;
   border-radius: 5px;
