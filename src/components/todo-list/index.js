@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { TodoItem } from 'components'
 
-import { Container, Title } from './styles'
+import { Container, Title, List } from './styles'
 
 const renderTasks = (tasks) => {
   const mappedTasks = tasks.map((task, index) => (
@@ -15,8 +15,10 @@ const renderTasks = (tasks) => {
 
 const TodoList = ({ tasks, title }) => (
   <Container>
-    <Title>{title}</Title>
-    {renderTasks(tasks)}
+    <List>
+      <Title>{title}</Title>
+      {renderTasks(tasks)}
+    </List>
   </Container>
 )
 

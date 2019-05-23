@@ -4,6 +4,7 @@ import { colors } from 'assets'
 export const FormTask = styled.form`
   display: flex;
   justify-content: center;
+  padding: 40px 0px;
 `
 
 export const Container = styled.div`
