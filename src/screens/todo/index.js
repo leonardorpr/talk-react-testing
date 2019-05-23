@@ -1,24 +1,35 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { Creators } from 'store/ducks/todo'
 
 import { TodoList, Form } from 'components'
-
 import { Container, Wrapper } from './styles'
 
-const tasks = [
-  { label: 'Fazer café', time: '5 minutos', done: false, toggle: () => { } },
-  { label: 'Fazer trabalho', time: '15 minutos', done: false, toggle: () => { } },
-  { label: 'Fazer talk', time: '3 minutos', done: false, toggle: () => { } },
-  { label: 'Participar da daily', time: '7 minutos', done: false, toggle: () => { } }
-]
-
-const Todo = () => (
+const Todo = ({ doneTasks, todoTasks, createTask, toggleTask }) => (
   <Container>
-    <Form onSubmit={() => {}} />
+    <Form onSubmit={(prop) => createTask(prop)} />
     <Wrapper>
-      <TodoList title='To Do' tasks={tasks} />
-      <TodoList title='Done' tasks={tasks} />
+      <TodoList title='To Do' tasks={todoTasks} />
+      <TodoList title='Done' tasks={doneTasks} />
     </Wrapper>
   </Container>
 )
 
-export default Todo
+Todo.propTypes = {
+  doneTasks: PropTypes.array,
+  todoTasks: PropTypes.array,
+  createTask: PropTypes.func,
+  toggleTask: PropTypes.func
+}
+
+const mapStateToProps = ({ todo }) => ({ doneTasks: todo.done, todoTasks: todo.todo })
+
+const mapDispatchToProps = dispatch => ({
+  createTask: bindActionCreators(Creators.createTask, dispatch),
+  toggleTask: bindActionCreators(Creators.toggleTask, dispatch)
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todo)
