@@ -8,8 +8,6 @@ export const FormTask = styled.form`
 `
 
 export const Container = styled.div`
-  width: 100%;
-  max-width: 620px;
   display: flex;
   justify-content: space-between;
 `
@@ -19,6 +17,7 @@ export const Field = styled.input`
   height: 20px;
   border-radius: 5px;
   padding: 10px;
+  margin-right: 10px;
   color: ${colors.accent.grey};
 
   &::placeholder {
