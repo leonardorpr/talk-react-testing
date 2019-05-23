@@ -9,7 +9,7 @@ export const { Types, Creators } = createActions({
 // Handlers
 const INITIAL_STATE = { done: [], todo: [] }
 
-const createTask = (state = INITIAL_STATE, action) => console.log('action', action)
+const createTask = (state = INITIAL_STATE, action) => ({ todo: [...state.done, action.task] })
 
 const toggleTask = (state = INITIAL_STATE, action) => console.log('actionToggle', action)
 
