@@ -13,7 +13,7 @@ const tasks = [
 
 const Todo = () => (
   <Container>
-    <Form />
+    <Form onSubmit={() => {}} />
     <Wrapper>
       <TodoList title='To Do' tasks={tasks} />
       <TodoList title='Done' tasks={tasks} />
