@@ -10,6 +10,12 @@ const Form = ({ onSubmit }) => {
   const handleSubmit = (event, data) => {
     event.preventDefault()
     onSubmit(data)
+    resetFields()
+  }
+
+  const resetFields = () => {
+    setName('')
+    setTime('')
   }
 
   return (
