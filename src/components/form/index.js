@@ -7,8 +7,13 @@ const Form = ({ onSubmit }) => {
   const [name, setName] = useState('')
   const [time, setTime] = useState('')
 
+  const handleSubmit = (event, data) => {
+    event.preventDefault()
+    onSubmit(data)
+  }
+
   return (
-    <FormTask onSubmit={() => onSubmit({ name, time })}>
+    <FormTask onSubmit={(event) => handleSubmit(event, { name, time })}>
       <Container>
         <Field
           placeholder='Nome da tarefa'
