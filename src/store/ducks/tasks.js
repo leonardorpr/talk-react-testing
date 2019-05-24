@@ -9,9 +9,9 @@ export const { Types, Creators } = createActions({
 // Handlers
 const INITIAL_STATE = { tasks: [] }
 
-const createTask = (state = INITIAL_STATE, action) => ({ tasks: [...state.tasks, action.task] })
+export const createTask = (state = INITIAL_STATE, action) => ({ tasks: [...state.tasks, action.task] })
 
-const toggleTask = (state = INITIAL_STATE, action) => {
+export const toggleTask = (state = INITIAL_STATE, action) => {
   const mappedTasks = state.tasks.map((task) => {
     if (task.id === action.id) {
       task.done = !task.done
