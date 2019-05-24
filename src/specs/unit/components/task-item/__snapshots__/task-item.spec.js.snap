@@ -69,9 +69,11 @@ exports[`[COMPONENTS] TaskItem Should render correctly 1`] = `
 <div>
   <div
     class="c0"
+    id="card"
   >
     <div
       class="c1"
+      id="indicator"
     />
     <div
       class="c2"
@@ -82,12 +84,12 @@ exports[`[COMPONENTS] TaskItem Should render correctly 1`] = `
         <span
           class="c4"
         >
-          Fazer café
+          Make Coffee
         </span>
         <span
           class="c5"
         >
-          15 minutos
+          15 minutes
         </span>
       </div>
     </div>

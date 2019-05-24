@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { colors } from 'assets'
 
-export const Task = styled.div`
+export const Task = styled.div.attrs({
+  id: 'card'
+})`
   display: flex;
   width: 100%;
   max-width: 400px;
@@ -28,7 +30,9 @@ export const Body = styled.div`
   padding: 10px;
 `
 
-export const Indicator = styled.div`
+export const Indicator = styled.div.attrs({
+  id: 'indicator'
+})`
   background-color: ${({ done }) => done ? colors.accent.green : colors.accent.red};
   width: 2.5%;
   margin-right: 2px;
