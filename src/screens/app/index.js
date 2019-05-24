@@ -5,12 +5,12 @@ import store from 'store'
 
 import GlobalStyles from './styles'
 
-import Todo from 'screens/todo'
+import Tasks from 'screens/tasks'
 
 const App = () => (
   <Provider store={store}>
     <GlobalStyles />
-    <Todo />
+    <Tasks />
   </Provider>
 )
 

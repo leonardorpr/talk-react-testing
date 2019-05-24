@@ -1,5 +1,5 @@
-import TodoList from './todo-list'
-import TodoItem from './todo-item'
+import TaskList from './task-list'
+import TaskItem from './task-item'
 import Form from './form'
 
-export { TodoList, TodoItem, Form }
+export { TaskList, TaskItem, Form }

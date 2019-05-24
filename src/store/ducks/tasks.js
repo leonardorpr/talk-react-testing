@@ -7,20 +7,20 @@ export const { Types, Creators } = createActions({
 })
 
 // Handlers
-const INITIAL_STATE = { todos: [] }
+const INITIAL_STATE = { tasks: [] }
 
-const createTask = (state = INITIAL_STATE, action) => ({ todos: [...state.todos, action.task] })
+const createTask = (state = INITIAL_STATE, action) => ({ tasks: [...state.tasks, action.task] })
 
 const toggleTask = (state = INITIAL_STATE, action) => {
-  const mappedTodos = state.todos.map((todo) => {
-    if (todo.id === action.id) {
-      todo.done = !todo.done
+  const mappedTasks = state.tasks.map((task) => {
+    if (task.id === action.id) {
+      task.done = !task.done
     }
 
-    return todo
+    return task
   })
 
-  return ({ todos: mappedTodos })
+  return ({ tasks: mappedTasks })
 }
 
 // Reducer

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Task, Body, Indicator, Informations, Label, Time } from './styles'
 
-const TodoItem = ({ done, label, time, toggle }) => {
+const TaskItem = ({ done, label, time, toggle }) => {
   const [status, setStatus] = useState(done || false)
 
   const handleToggle = (status) => {
@@ -24,18 +24,18 @@ const TodoItem = ({ done, label, time, toggle }) => {
   )
 }
 
-TodoItem.propTypes = {
+TaskItem.propTypes = {
   done: PropTypes.bool,
   label: PropTypes.string,
   time: PropTypes.string,
   toggle: PropTypes.func
 }
 
-TodoItem.defaultProps = {
+TaskItem.defaultProps = {
   done: false,
   label: '',
   time: '',
   toggle: () => {}
 }
 
-export default TodoItem
+export default TaskItem

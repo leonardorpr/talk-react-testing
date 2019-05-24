@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { TodoItem } from 'components'
+import { TaskItem } from 'components'
 
 import { Container, Title, List } from './styles'
 
 const renderTasks = (tasks, toggle) => {
   const mappedTasks = tasks.map((task) => (
-    <TodoItem key={task.id} done={task.done} label={task.name} time={task.time} toggle={() => toggle(task.id)} />
+    <TaskItem key={task.id} done={task.done} label={task.name} time={task.time} toggle={() => toggle(task.id)} />
   ))
 
   return mappedTasks
 }
 
-const TodoList = ({ tasks, title, toggle }) => (
+const TaskList = ({ tasks, title, toggle }) => (
   <Container>
     <List>
       <Title>{title}</Title>
@@ -22,16 +22,16 @@ const TodoList = ({ tasks, title, toggle }) => (
   </Container>
 )
 
-TodoList.propTypes = {
+TaskList.propTypes = {
   tasks: PropTypes.array,
   title: PropTypes.string,
   toggle: PropTypes.func
 }
 
-TodoList.defaultProps = {
+TaskList.defaultProps = {
   tasks: [],
   title: null,
   toggle: () => { }
 }
 
-export default TodoList
+export default TaskList
