@@ -1,137 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[COMPONENTS] TaskList Should render correctly 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 400px;
-  height: 60px;
-  margin-left: 20px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  margin: 15px;
-}
-
-.c3:hover {
-  -webkit-box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.75);
-  box-shadow: 0px 2px 17px -5px rgba(0,0,0,0.75);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.c5 {
-  background-color: #2A2C30;
-  width: 97.5%;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  padding: 10px;
-}
-
-.c4 {
-  background-color: #2ECC71;
-  width: 2.5%;
-  margin-right: 2px;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.c9 {
-  background-color: #DA493A;
-  width: 2.5%;
-  margin-right: 2px;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #FFF;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c8 {
-  text-align: end;
-  font-size: 12px;
-  color: #FFF;
-}
-
-.c0 {
-  width: 100%;
-  max-width: 900px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  color: #FFF;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iwsKbI bKXkKN"
   >
     <div
-      class="c1"
+      class="sc-gZMcBi esSNAH"
     >
       <h3
-        class="c2"
+        class="sc-gqjmRU ejFaCX"
       >
         Done
       </h3>
       <div
-        class="c3"
+        class="sc-bdVaJa kopiSs"
         id="card"
       >
         <div
-          class="c4"
+          class="sc-htpNat kmdSjr"
           id="indicator"
         />
         <div
-          class="c5"
+          class="sc-bwzfXH hRLiYZ"
         >
           <div
-            class="c6"
+            class="sc-bxivhb glCqXO"
           >
             <span
-              class="c7"
+              class="sc-ifAKCX cSUKMq"
             >
               Make Coffee
             </span>
             <span
-              class="c8"
+              class="sc-EHOje gKezbk"
             >
               15 minutes
             </span>
@@ -139,26 +41,26 @@ exports[`[COMPONENTS] TaskList Should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="c3"
+        class="sc-bdVaJa kopiSs"
         id="card"
       >
         <div
-          class="c9"
+          class="sc-htpNat pYnDR"
           id="indicator"
         />
         <div
-          class="c5"
+          class="sc-bwzfXH hRLiYZ"
         >
           <div
-            class="c6"
+            class="sc-bxivhb glCqXO"
           >
             <span
-              class="c7"
+              class="sc-ifAKCX cSUKMq"
             >
               Study
             </span>
             <span
-              class="c8"
+              class="sc-EHOje gKezbk"
             >
               3 hours
             </span>
@@ -166,26 +68,26 @@ exports[`[COMPONENTS] TaskList Should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="c3"
+        class="sc-bdVaJa kopiSs"
         id="card"
       >
         <div
-          class="c9"
+          class="sc-htpNat pYnDR"
           id="indicator"
         />
         <div
-          class="c5"
+          class="sc-bwzfXH hRLiYZ"
         >
           <div
-            class="c6"
+            class="sc-bxivhb glCqXO"
           >
             <span
-              class="c7"
+              class="sc-ifAKCX cSUKMq"
             >
               Dinner
             </span>
             <span
-              class="c8"
+              class="sc-EHOje gKezbk"
             >
               1 hours
             </span>

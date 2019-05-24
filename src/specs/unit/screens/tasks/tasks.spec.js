@@ -2,20 +2,17 @@ import React from 'react'
 import { render } from 'react-testing-library'
 
 import { Provider } from 'react-redux'
-import store from 'store'
 
-import { mockTasks } from 'specs/helpers'
+import { mockTasks, mockStore } from 'specs/helpers'
 
 import Tasks, { handleTasks } from 'screens/tasks'
 
 describe('[SCREENS] Tasks', () => {
   it('Should render correctly', () => {
     const { container } = render(
-      <>
-        <Provider store={store}>
-          <Tasks tasks={[]} createTask={jest.fn()} toggleTask={jest.fn()} />
-        </Provider>
-      </>
+      <Provider store={mockStore({ tasks: { tasks: [] } })}>
+        <Tasks createTask={jest.fn()} toggleTask={jest.fn()} />
+      </Provider>
     )
 
     expect(container).toMatchSnapshot()
