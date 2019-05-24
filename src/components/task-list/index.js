@@ -34,4 +34,4 @@ TaskList.defaultProps = {
   toggle: () => { }
 }
 
-export default TaskList
+export { TaskList as default, renderTasks }
