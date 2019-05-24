@@ -5,31 +5,33 @@ import { TodoItem } from 'components'
 
 import { Container, Title, List } from './styles'
 
-const renderTasks = (tasks) => {
-  const mappedTasks = tasks.map((task, index) => (
-    <TodoItem key={index} done={task.done} label={task.name} time={task.time} toggle={() => { }} />
+const renderTasks = (tasks, toggle) => {
+  const mappedTasks = tasks.map((task) => (
+    <TodoItem key={task.id} done={task.done} label={task.name} time={task.time} toggle={() => toggle(task.id)} />
   ))
 
   return mappedTasks
 }
 
-const TodoList = ({ tasks, title }) => (
+const TodoList = ({ tasks, title, toggle }) => (
   <Container>
     <List>
       <Title>{title}</Title>
-      {renderTasks(tasks)}
+      {renderTasks(tasks, toggle)}
     </List>
   </Container>
 )
 
 TodoList.propTypes = {
   tasks: PropTypes.array,
-  title: PropTypes.string
+  title: PropTypes.string,
+  toggle: PropTypes.func
 }
 
 TodoList.defaultProps = {
   tasks: [],
-  title: null
+  title: null,
+  toggle: () => { }
 }
 
 export default TodoList

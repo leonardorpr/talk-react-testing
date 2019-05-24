@@ -32,7 +32,10 @@ TodoItem.propTypes = {
 }
 
 TodoItem.defaultProps = {
-  done: false
+  done: false,
+  label: '',
+  time: '',
+  toggle: () => {}
 }
 
 export default TodoItem

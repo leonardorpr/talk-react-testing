@@ -8,24 +8,31 @@ import { Creators } from 'store/ducks/todo'
 import { TodoList, Form } from 'components'
 import { Container, Wrapper } from './styles'
 
-const Todo = ({ doneTasks, todoTasks, createTask, toggleTask }) => (
+const handleTodos = (todos, type) => {
+  if (type === 'done') {
+    return todos.filter(todo => todo.done)
+  }
+
+  return todos.filter(todo => !todo.done)
+}
+
+const Todo = ({ todos, createTask, toggleTask }) => (
   <Container>
     <Form onSubmit={(prop) => createTask(prop)} />
     <Wrapper>
-      <TodoList title='To Do' tasks={todoTasks} />
-      <TodoList title='Done' tasks={doneTasks} />
+      <TodoList title='To Do' tasks={handleTodos(todos, 'todo')} toggle={(id) => toggleTask(id)} />
+      <TodoList title='Done' tasks={handleTodos(todos, 'done')} toggle={(id) => toggleTask(id)} />
     </Wrapper>
   </Container>
 )
 
 Todo.propTypes = {
-  doneTasks: PropTypes.array,
-  todoTasks: PropTypes.array,
+  todos: PropTypes.array,
   createTask: PropTypes.func,
   toggleTask: PropTypes.func
 }
 
-const mapStateToProps = ({ todo }) => ({ doneTasks: todo.done, todoTasks: todo.todo })
+const mapStateToProps = ({ todo }) => ({ todos: todo.todos })
 
 const mapDispatchToProps = dispatch => ({
   createTask: bindActionCreators(Creators.createTask, dispatch),

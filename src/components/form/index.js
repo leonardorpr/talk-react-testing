@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
+import uuid from 'uuid/v1'
+
 import { FormTask, Field, Button, Container } from './styles'
 
 const Form = ({ onSubmit }) => {
@@ -19,7 +21,7 @@ const Form = ({ onSubmit }) => {
   }
 
   return (
-    <FormTask onSubmit={(event) => handleSubmit(event, { name, time })}>
+    <FormTask onSubmit={(event) => handleSubmit(event, { id: uuid(), name, time })}>
       <Container>
         <Field
           placeholder='Nome da tarefa'
