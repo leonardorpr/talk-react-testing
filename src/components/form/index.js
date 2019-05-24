@@ -24,16 +24,16 @@ const Form = ({ onSubmit }) => {
     <FormTask onSubmit={(event) => handleSubmit(event, { id: uuid(), name, time })}>
       <Container>
         <Field
-          placeholder='Nome da tarefa'
+          placeholder='Task name'
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
         <Field
-          placeholder='Tempo estimado'
+          placeholder='Estimated time'
           value={time}
           onChange={(event) => setTime(event.target.value)}
         />
-        <Button>Registrar</Button>
+        <Button>Create</Button>
       </Container>
     </FormTask>
   )
